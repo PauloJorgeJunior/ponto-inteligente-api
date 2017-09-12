@@ -1,15 +1,12 @@
 package com.pjj.pontointeligente.api.repositories;
 
-
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.pjj.pontointeligente.api.entities.Empresa;
 
-public interface EmpresaRepository extends JpaRepository<Empresa, Long>
-{
+public interface EmpresaRepository extends JpaRepository<Empresa, Long> {
 
-	@Transactional(readOnly=true)
+	@Transactional(readOnly = true)
 	Empresa findByCnpj(String cnpj);
 }
